@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_1/appservices/appnavigator.dart';
+import 'package:smart_1/firebase_options.dart';
 import 'package:smart_1/pages/doorcontrolpage.dart';
 import 'package:smart_1/pages/homepage.dart';
 import 'package:smart_1/pages/lightcontrolpage.dart';
@@ -7,9 +8,11 @@ import 'package:smart_1/pages/ongoingpage.dart';
 import 'package:smart_1/pages/splashpage.dart';
 import 'package:smart_1/pages/tempraturecontrol.dart';
 import 'package:flutter/services.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp(options: DefaultFirebaseOptions.android);
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((value) => runApp(MyApp()));
 }

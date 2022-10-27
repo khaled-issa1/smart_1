@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:smart_1/backend/FirebaseHelper.dart';
 
 class DoorControlPage extends StatefulWidget {
   static String routeName = 'DoorControlPage';
@@ -65,6 +66,7 @@ class _DoorControlPageState extends State<DoorControlPage> {
             height: 70,
             showOnOff: true,
             onToggle: (val) async {
+              FirebaseHelper.firebaseHelper.setDoor(val);
               setState(() {
                 sw1 = val;
               });

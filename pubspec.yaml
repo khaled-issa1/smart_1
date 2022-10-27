@@ -19,6 +19,9 @@ dependencies:
   carousel_slider: ^4.1.1
   flutter_switch: ^0.3.2
   syncfusion_flutter_gauges: ^20.2.45
+  firebase_core: ^2.1.0
+  firebase_database: ^10.0.2
+  
 
 
 

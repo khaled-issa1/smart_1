@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:smart_1/backend/FirebaseHelper.dart';
 
 class LightControlPage extends StatefulWidget {
   static String routeName = 'LightControlPage';
@@ -65,6 +66,7 @@ class _LightControlPageState extends State<LightControlPage> {
             height: 70,
             showOnOff: true,
             onToggle: (val) async {
+              FirebaseHelper.firebaseHelper.lightControl(val);
               sw1 = val;
 
               setState(() {});
